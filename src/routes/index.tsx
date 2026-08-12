@@ -1,24 +1,69 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { Toaster } from "@/components/ui/sonner";
+import { SiteNav } from "@/components/sections/SiteNav";
+import { Hero } from "@/components/sections/Hero";
+import { TrustStrip } from "@/components/sections/TrustStrip";
+import { About } from "@/components/sections/About";
+import { Curriculum } from "@/components/sections/Curriculum";
+import { Journey } from "@/components/sections/Journey";
+import { Industries } from "@/components/sections/Industries";
+import { WhyDinesh } from "@/components/sections/WhyDinesh";
+import { Outcomes } from "@/components/sections/Outcomes";
+import { Inquiry } from "@/components/sections/Inquiry";
+import { Footer } from "@/components/sections/Footer";
+
+const title = "Dinesh Saxena — Advanced Catering FoSTaC & Food Safety Trainer";
+const description =
+  "FSSAI-aligned Advanced Catering FoSTaC training by Dinesh Saxena — IHM Dadar alumnus, ex-Taj & Taj SATS, TATA STRIVE certified trainer. Mumbai, India.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Dinesh Saxena",
+          jobTitle: "Master Trainer – Advanced Catering FoSTaC & Food Safety",
+          telephone: "+91-9820274960",
+          address: { "@type": "PostalAddress", addressLocality: "Mumbai", addressCountry: "IN" },
+          alumniOf: "IHM Dadar, Mumbai",
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <SiteNav />
+      <main>
+        <Hero />
+        <TrustStrip />
+        <About />
+        <Curriculum />
+        <Journey />
+        <Industries />
+        <WhyDinesh />
+        <Outcomes />
+        <Inquiry />
+      </main>
+      <Footer />
+      <Toaster position="top-center" richColors />
     </div>
   );
 }
