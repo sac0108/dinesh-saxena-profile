@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 import { SectionHeading } from "./SectionHeading";
 
 export function Curriculum() {
-  const [activeId, setActiveId] = useState(curriculum[0].id);
-  const active = curriculum.find((m) => m.id === activeId) ?? curriculum[0];
+  const [activeId, setActiveId] = useState(curriculum[0]!.id);
+  const active = curriculum.find((m) => m.id === activeId) ?? curriculum[0]!;
 
   return (
     <section id="curriculum" className="scroll-mt-24 bg-surface py-20 lg:py-28">
@@ -43,8 +43,8 @@ export function Curriculum() {
                       const next =
                         (i + (e.key === "ArrowDown" ? 1 : -1) + curriculum.length) %
                         curriculum.length;
-                      setActiveId(curriculum[next].id);
-                      document.getElementById(`tab-${curriculum[next].id}`)?.focus();
+                      setActiveId(curriculum[next]!.id);
+                      document.getElementById(`tab-${curriculum[next]!.id}`)?.focus();
                     }
                   }}
                   className={cn(
