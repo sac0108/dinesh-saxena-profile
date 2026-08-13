@@ -1,5 +1,7 @@
 import { ArrowRight, BadgeCheck, Phone, ShieldCheck, Thermometer, ClipboardCheck } from "lucide-react";
 
+import profileAsset from "@/assets/dinesh-saxena-profile.jpg.asset.json";
+
 import { Button } from "@/components/ui/button";
 
 const badges = [
@@ -98,24 +100,11 @@ export function Hero() {
 
         <div className="reveal relative">
           <div className="mx-auto max-w-sm rounded-2xl border border-navy-foreground/15 bg-navy-foreground/[0.06] p-6 backdrop-blur-sm">
-            <div
-              className="flex aspect-4/5 w-full items-end justify-center rounded-xl border border-navy-foreground/10"
-              style={{
-                backgroundImage:
-                  "linear-gradient(160deg, rgba(255,255,255,0.10), rgba(11,37,69,0.55))",
-              }}
-              role="img"
-              aria-label="Trainer profile portrait placeholder for Dinesh Saxena"
-            >
-              <div className="w-full rounded-b-xl bg-navy/70 p-5 text-center">
-                <p className="text-lg font-bold">Dinesh Saxena</p>
-                <p className="mt-1 text-xs leading-relaxed text-navy-foreground/75">
-                  Master Trainer – Advanced Catering FoSTaC &amp; Food Safety
-                  <br />
-                  TATA STRIVE Certified | Ex-Taj &amp; Taj SATS
-                </p>
-              </div>
-            </div>
+            <img
+              src={profileAsset.url}
+              alt="Dinesh Saxena — Master Trainer for Advanced Catering FoSTaC and Food Safety"
+              className="aspect-4/5 w-full rounded-xl border border-navy-foreground/10 object-cover object-top"
+            />
             <div className="mt-5 grid grid-cols-3 gap-3 text-center">
               {[
                 { icon: ShieldCheck, label: "GHP / GMP" },
@@ -131,9 +120,6 @@ export function Hero() {
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-center text-[11px] text-navy-foreground/55">
-              Portrait placeholder — replaceable with an official photograph.
-            </p>
           </div>
         </div>
       </div>
