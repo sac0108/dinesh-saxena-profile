@@ -5,6 +5,7 @@ import { SiteNav } from "@/components/sections/SiteNav";
 import { Hero } from "@/components/sections/Hero";
 import { TrustStrip } from "@/components/sections/TrustStrip";
 import { About } from "@/components/sections/About";
+import { ProfessionalJourney } from "@/components/sections/ProfessionalJourney";
 import { Curriculum } from "@/components/sections/Curriculum";
 import { Journey } from "@/components/sections/Journey";
 import { Industries } from "@/components/sections/Industries";
@@ -13,9 +14,9 @@ import { Outcomes } from "@/components/sections/Outcomes";
 import { Inquiry } from "@/components/sections/Inquiry";
 import { Footer } from "@/components/sections/Footer";
 
-const title = "Dinesh Saxena — Advanced Catering FoSTaC & Food Safety Trainer";
+const title = "Dinesh Saxena — Hospitality & Food Safety Professional";
 const description =
-  "FSSAI-aligned Advanced Catering FoSTaC training by Dinesh Saxena — IHM Dadar alumnus, ex-Taj & Taj SATS, TATA STRIVE certified trainer. Mumbai, India.";
+  "Veteran hospitality professional, food-safety specialist, trainer and independent consultant. IHM Dadar alumnus, ex-Taj and Taj SATS, Mumbai.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,7 +37,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Dinesh Saxena",
-          jobTitle: "Master Trainer – Advanced Catering FoSTaC & Food Safety",
+          jobTitle: "Hospitality Professional, Food Safety Specialist, Trainer and Independent Consultant",
           telephone: "+91-9820274960",
           address: { "@type": "PostalAddress", addressLocality: "Mumbai", addressCountry: "IN" },
           alumniOf: "IHM Dadar, Mumbai",
@@ -55,6 +56,7 @@ function Index() {
         <Hero />
         <TrustStrip />
         <About />
+        <ProfessionalJourney />
         <Curriculum />
         <Journey />
         <Industries />

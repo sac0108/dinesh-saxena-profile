@@ -24,14 +24,14 @@ const timeline = [
     body: "Training exposure in the flight-kitchen environment, where cold chain, batch production, hold times and documentation carry exceptional scrutiny.",
   },
   {
-    period: "Certification",
-    title: "TATA STRIVE certified trainer",
-    body: "Structured trainer pedagogy: competency mapping, session design, learner evaluation and measurement of training effectiveness.",
+    period: "Training & Development",
+    title: "Building operational capability",
+    body: "Applying structured learning methods to competency mapping, session design, learner evaluation and the measurement of training effectiveness.",
   },
   {
     period: "Today",
-    title: "Independent Master Trainer",
-    body: "Post-retirement freelance practice delivering FSSAI-aligned Advanced Catering FoSTaC programs to food businesses across India.",
+    title: "Independent Trainer & Consultant",
+    body: "An active independent practice supporting food businesses through FSSAI-aligned Advanced Catering FoSTaC programs, operational training and practical food-safety guidance.",
   },
 ];
 
@@ -40,9 +40,9 @@ export function About() {
     <section id="about" className="scroll-mt-24 bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="About the trainer"
-          title="Three decades of hospitality rigour, now taught on the kitchen floor"
-          description="Dinesh Saxena is a veteran Food Safety Specialist and Certified Advanced FoSTaC Trainer based in Mumbai. His approach is shaped by having run the operations he now trains — hotel kitchens, banqueting, and airline catering at scale."
+          eyebrow="About Dinesh Saxena"
+          title="A hospitality career shaped by service, discipline and operational precision"
+          description="Dinesh Saxena is a Mumbai-based veteran hospitality professional, food-safety specialist, trainer and independent consultant. From his foundation at IHM Dadar through the Taj ecosystem, F&B operations, learning and development, and Taj SATS airline catering, his work has remained grounded in the realities of teams, kitchens and service environments. Today, he brings that experience to independent training and consulting, translating food-safety standards into practical operational behaviour."
         />
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
@@ -67,16 +67,15 @@ export function About() {
               <Quote className="size-7 text-gold" aria-hidden="true" />
               <h3 className="mt-4 text-lg font-bold text-navy">Trainer&rsquo;s philosophy</h3>
               <p className="mt-3 text-sm leading-relaxed text-foreground/85">
-                &ldquo;A regulation only protects the guest when a food handler changes what they do
-                at the sink, the receiving dock and the holding counter. My work is to convert food
-                safety rules into practical kitchen behaviour that survives a busy service.&rdquo;
+                &ldquo;Effective food safety is not created by rules alone. It is created when standards
+                become part of everyday operational behaviour.&rdquo;
               </p>
               <div className="mt-6 border-t border-border pt-5">
                 <p className="text-sm font-semibold text-navy">Dinesh Saxena</p>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  Master Trainer – Advanced Catering FoSTaC &amp; Food Safety
+                  Hospitality Professional · Food Safety Specialist · Trainer &amp; Independent Consultant
                   <br />
-                  TATA STRIVE Certified | Ex-Taj &amp; Taj SATS | Mumbai, India
+                  IHM Dadar Alumnus | Ex-Taj &amp; Taj SATS | Mumbai, India
                 </p>
               </div>
             </div>

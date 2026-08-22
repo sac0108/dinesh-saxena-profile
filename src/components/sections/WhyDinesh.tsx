@@ -10,8 +10,8 @@ const reasons = [
   },
   {
     icon: Presentation,
-    title: "TATA STRIVE pedagogy",
-    body: "Structured trainer methodology: competency mapping, session planning, participative delivery, learner evaluation and measurement of training effectiveness.",
+    title: "Training & L&D discipline",
+    body: "Structured trainer methodology shaped by learning and development work: competency mapping, session planning, participative delivery, learner evaluation and measurement of training effectiveness.",
   },
   {
     icon: HardHat,
