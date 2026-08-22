@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 const badges = [
   "IHM Dadar Alumnus",
   "Ex-Taj & Taj SATS Leader",
-  "TATA STRIVE Certified Trainer",
   "FSSAI Advanced FoSTaC Aligned",
 ];
 
@@ -39,18 +38,18 @@ export function Hero() {
         <div className="reveal">
           <p className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-gold uppercase">
             <ShieldCheck className="size-3.5" aria-hidden="true" />
-            Master Trainer — Advanced Catering FoSTaC
+            Hospitality Veteran · Food Safety Specialist · Independent Consultant
           </p>
 
           <h1 className="mt-6 text-4xl leading-[1.1] font-extrabold tracking-tight text-balance sm:text-5xl lg:text-[3.4rem]">
-            FSSAI-Compliant Advanced Catering FoSTaC Training by Taj &amp; IHM Dadar Veteran{" "}
-            <span className="text-gold">Dinesh Saxena</span>
+            <span className="text-gold">Dinesh Saxena</span> — Hospitality Leadership, Food Safety
+            Training &amp; Consulting
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-navy-foreground/80 sm:text-lg">
-            Empowering flight kitchens, fine-dining brigades, cloud kitchens and institutional
-            caterers with food safety leadership, GHP/GMP discipline and genuine audit readiness —
-            delivered as practical kitchen behaviour, not classroom theory.
+            Bringing a career shaped by IHM Dadar, the Taj ecosystem, F&amp;B operations, learning
+            and development, and Taj SATS airline catering to practical food-safety training and
+            independent consulting. Advanced Catering FoSTaC remains a key current offering.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -102,7 +101,7 @@ export function Hero() {
           <div className="mx-auto max-w-sm rounded-2xl border border-navy-foreground/15 bg-navy-foreground/[0.06] p-6 backdrop-blur-sm">
             <img
               src={profileAsset.url}
-              alt="Dinesh Saxena — Master Trainer for Advanced Catering FoSTaC and Food Safety"
+              alt="Dinesh Saxena — hospitality professional, food safety specialist, trainer and independent consultant"
               className="aspect-4/5 w-full rounded-xl border border-navy-foreground/10 object-cover object-top"
             />
             <div className="mt-5 grid grid-cols-3 gap-3 text-center">

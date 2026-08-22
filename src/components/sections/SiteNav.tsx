@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#professional-journey", label: "Work" },
   { href: "#curriculum", label: "Curriculum" },
   { href: "#journey", label: "Training Journey" },
   { href: "#industries", label: "Industry Solutions" },
@@ -42,7 +43,7 @@ export function SiteNav() {
               Dinesh Saxena
             </span>
             <span className="block text-[11px] font-medium tracking-wide text-muted-foreground">
-              Advanced FoSTaC &amp; Food Safety Trainer
+              Hospitality · Food Safety · Training &amp; Consulting
             </span>
           </span>
         </a>

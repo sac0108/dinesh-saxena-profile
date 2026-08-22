@@ -2,6 +2,7 @@ import { MapPin, Phone, ShieldCheck } from "lucide-react";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#professional-journey", label: "Work & Journey" },
   { href: "#curriculum", label: "Curriculum" },
   { href: "#industries", label: "Industry Solutions" },
   { href: "#book", label: "Book Batch" },
@@ -20,8 +21,8 @@ export function Footer() {
               <p className="text-sm font-bold">Dinesh Saxena</p>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-navy-foreground/70">
-              Advanced FoSTaC &amp; Food Safety Trainer. Master Trainer – Advanced Catering FoSTaC |
-              TATA STRIVE Certified | Ex-Taj &amp; Taj SATS | IHM Dadar alumnus.
+              Veteran hospitality professional, food-safety specialist, trainer and independent
+              consultant. Ex-Taj &amp; Taj SATS | IHM Dadar alumnus.
             </p>
           </div>
 
@@ -63,7 +64,8 @@ export function Footer() {
 
         <div className="mt-12 border-t border-navy-foreground/12 pt-6">
           <p className="text-xs leading-relaxed text-navy-foreground/55">
-            Independent Food Safety Trainer delivering FSSAI FoSTaC-aligned training modules.
+            Independent hospitality professional delivering food-safety training, FoSTaC-aligned
+            programmes and practical consulting support.
           </p>
           <p className="mt-2 text-xs text-navy-foreground/45">
             &copy; {new Date().getFullYear()} Dinesh Saxena. All rights reserved.
