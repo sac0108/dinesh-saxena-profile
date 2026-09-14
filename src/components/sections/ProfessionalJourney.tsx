@@ -1,6 +1,7 @@
 import { BriefcaseBusiness, CalendarDays, Mic2 } from "lucide-react";
 
 import { professionalEngagements } from "@/data/engagements";
+import { brand } from "@/data/brand";
 
 import { SectionHeading } from "./SectionHeading";
 
@@ -17,7 +18,7 @@ export function ProfessionalJourney() {
         <SectionHeading
           eyebrow="Work & professional journey"
           title="An active practice, documented with purpose"
-          description="This evolving record will bring together verified training, consulting, industry and education engagements as Dinesh Saxena's independent professional practice grows. Each future update will have its own shareable detail page, keeping this website the central source of truth."
+          description={`This evolving record will bring together verified training, consulting, industry and education engagements as ${brand.displayName}'s independent professional practice grows. Each future update will have its own shareable detail page, keeping this website the central source of truth.`}
         />
 
         {professionalEngagements.length > 0 ? (
@@ -53,8 +54,8 @@ export function ProfessionalJourney() {
         )}
 
         <p className="mt-6 text-xs leading-relaxed text-muted-foreground">
-          Verified professional and social channels, including LinkedIn, Instagram and X, can be
-          connected here when official profile links are available.
+          Verified professional and social channels can be connected here when official profile
+          links are available.
         </p>
       </div>
     </section>

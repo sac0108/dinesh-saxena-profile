@@ -1,5 +1,7 @@
 import { Quote } from "lucide-react";
 
+import { brand } from "@/data/brand";
+
 import { SectionHeading } from "./SectionHeading";
 
 const timeline = [
@@ -40,9 +42,9 @@ export function About() {
     <section id="about" className="scroll-mt-24 bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="About Dinesh Saxena"
+          eyebrow={`About ${brand.displayName}`}
           title="A hospitality career shaped by service, discipline and operational precision"
-          description="Dinesh Saxena is a Mumbai-based veteran hospitality professional, food-safety specialist, trainer and independent consultant. From his foundation at IHM Dadar through the Taj ecosystem, F&B operations, learning and development, and Taj SATS airline catering, his work has remained grounded in the realities of teams, kitchens and service environments. Today, he brings that experience to independent training and consulting, translating food-safety standards into practical operational behaviour."
+          description={`${brand.displayName} is a ${brand.city.name}-based veteran hospitality professional, food-safety specialist, trainer and independent consultant. From his foundation at IHM Dadar through the Taj ecosystem, F&B operations, learning and development, and Taj SATS airline catering, his work has remained grounded in the realities of teams, kitchens and service environments. Today, he brings that experience to independent training and consulting, translating food-safety standards into practical operational behaviour.`}
         />
 
         <div className="mt-14 grid gap-12 lg:grid-cols-[1fr_0.85fr] lg:gap-16">
@@ -71,11 +73,11 @@ export function About() {
                 become part of everyday operational behaviour.&rdquo;
               </p>
               <div className="mt-6 border-t border-border pt-5">
-                <p className="text-sm font-semibold text-navy">Dinesh Saxena</p>
+                <p className="text-sm font-semibold text-navy">{brand.displayName}</p>
                 <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                  Hospitality Professional · Food Safety Specialist · Trainer &amp; Independent Consultant
+                  {brand.descriptor}
                   <br />
-                  IHM Dadar Alumnus | Ex-Taj &amp; Taj SATS | Mumbai, India
+                  IHM Dadar Alumnus | Ex-Taj &amp; Taj SATS | {brand.city.display}
                 </p>
               </div>
             </div>

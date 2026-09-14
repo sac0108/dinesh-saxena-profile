@@ -1,8 +1,7 @@
 import { ArrowRight, BadgeCheck, Phone, ShieldCheck, Thermometer, ClipboardCheck } from "lucide-react";
 
-import profileAsset from "@/assets/dinesh-saxena-profile.jpg.asset.json";
-
 import { Button } from "@/components/ui/button";
+import { brand } from "@/data/brand";
 
 const badges = [
   "IHM Dadar Alumnus",
@@ -38,11 +37,11 @@ export function Hero() {
         <div className="reveal">
           <p className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-gold uppercase">
             <ShieldCheck className="size-3.5" aria-hidden="true" />
-            Hospitality Veteran · Food Safety Specialist · Independent Consultant
+            {brand.descriptor}
           </p>
 
           <h1 className="mt-6 text-4xl leading-[1.1] font-extrabold tracking-tight text-balance sm:text-5xl lg:text-[3.4rem]">
-            <span className="text-gold">Dinesh Saxena</span> — Hospitality Leadership, Food Safety
+            <span className="text-gold">{brand.displayName}</span> — Hospitality Leadership, Food Safety
             Training &amp; Consulting
           </h1>
 
@@ -77,9 +76,9 @@ export function Hero() {
               variant="ghost"
               className="text-gold hover:bg-gold/10 hover:text-gold"
             >
-              <a href="tel:+919820274960">
+              <a href={brand.phone.href}>
                 <Phone className="size-4" aria-hidden="true" />
-                Call +91 98202 74960
+                Call {brand.phone.display}
               </a>
             </Button>
           </div>
@@ -100,8 +99,8 @@ export function Hero() {
         <div className="reveal relative">
           <div className="mx-auto max-w-sm rounded-2xl border border-navy-foreground/15 bg-navy-foreground/[0.06] p-6 backdrop-blur-sm">
             <img
-              src={profileAsset.url}
-              alt="Dinesh Saxena — hospitality professional, food safety specialist, trainer and independent consultant"
+              src={brand.assets.profilePortrait}
+              alt={`${brand.displayName} — ${brand.descriptor}`}
               className="aspect-4/5 w-full rounded-xl border border-navy-foreground/10 object-cover object-top"
             />
             <div className="mt-5 grid grid-cols-3 gap-3 text-center">
