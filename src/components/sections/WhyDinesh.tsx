@@ -1,5 +1,7 @@
 import { HardHat, Plane, Presentation } from "lucide-react";
 
+import { brand } from "@/data/brand";
+
 import { SectionHeading } from "./SectionHeading";
 
 const reasons = [
@@ -25,7 +27,7 @@ export function WhyDinesh() {
     <section className="bg-surface py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Why Dinesh Saxena"
+          eyebrow={`Why ${brand.displayName}`}
           title="An operator's instinct with a trainer's discipline"
           align="center"
         />

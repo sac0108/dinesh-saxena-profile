@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, Phone, ShieldCheck, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { brand } from "@/data/brand";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -35,15 +36,26 @@ export function SiteNav() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="flex size-9 items-center justify-center rounded-md bg-navy text-navy-foreground">
-            <ShieldCheck className="size-5 text-gold" aria-hidden="true" />
-          </span>
+          {brand.assets.primaryLogo ? (
+            <img
+              src={brand.assets.primaryLogo}
+              alt=""
+              className="size-9 object-contain"
+            />
+          ) : (
+            <span
+              className="flex size-9 items-center justify-center rounded-md bg-navy text-navy-foreground"
+              aria-hidden="true"
+            >
+              <ShieldCheck className="size-5 text-gold" />
+            </span>
+          )}
           <span className="leading-tight">
             <span className="block text-sm font-bold tracking-tight text-navy">
-              Dinesh Saxena
+              {brand.displayName}
             </span>
             <span className="block text-[11px] font-medium tracking-wide text-muted-foreground">
-              Hospitality · Food Safety · Training &amp; Consulting
+              {brand.shortDescriptor}
             </span>
           </span>
         </a>
@@ -62,9 +74,9 @@ export function SiteNav() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <Button asChild variant="outline" size="sm">
-            <a href="tel:+919820274960">
+            <a href={brand.phone.href}>
               <Phone className="size-4" aria-hidden="true" />
-              +91 98202 74960
+              {brand.phone.display}
             </a>
           </Button>
           <Button asChild size="sm" className="bg-emerald text-emerald-foreground hover:bg-emerald/90">
@@ -104,9 +116,9 @@ export function SiteNav() {
                 </a>
               </Button>
               <Button asChild variant="outline">
-                <a href="tel:+919820274960">
+                <a href={brand.phone.href}>
                   <Phone className="size-4" aria-hidden="true" />
-                  Call +91 98202 74960
+                  Call {brand.phone.display}
                 </a>
               </Button>
             </div>

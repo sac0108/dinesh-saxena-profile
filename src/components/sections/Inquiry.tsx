@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { brand } from "@/data/brand";
 
 const schema = z.object({
   name: z.string().trim().min(2, "Please enter your full name").max(100),
@@ -57,7 +58,7 @@ export function Inquiry() {
     form.reset();
     toast.success("Training request captured", {
       description:
-        "First-iteration demo: this form is not yet connected, so nothing was emailed or stored. Please call +91 98202 74960 for an immediate response.",
+        `First-iteration demo: this form is not yet connected, so nothing was emailed or stored. Please call ${brand.phone.display} for an immediate response.`,
     });
   };
 
@@ -96,9 +97,9 @@ export function Inquiry() {
               Urgent batches and short-notice audit preparation are best handled over a call.
             </p>
             <Button asChild size="lg" className="mt-5 w-full bg-navy text-navy-foreground hover:bg-navy/90">
-              <a href="tel:+919820274960">
+              <a href={brand.phone.href}>
                 <Phone className="size-4" aria-hidden="true" />
-                Call +91 98202 74960
+                Call {brand.phone.display}
               </a>
             </Button>
           </div>

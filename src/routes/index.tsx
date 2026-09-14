@@ -13,10 +13,15 @@ import { WhyDinesh } from "@/components/sections/WhyDinesh";
 import { Outcomes } from "@/components/sections/Outcomes";
 import { Inquiry } from "@/components/sections/Inquiry";
 import { Footer } from "@/components/sections/Footer";
+import { brand, verifiedSocialLinks } from "@/data/brand";
 
-const title = "Dinesh Saxena — Hospitality & Food Safety Professional";
+const title = `${brand.displayName} | Hospitality & Food Safety`;
 const description =
-  "Veteran hospitality professional, food-safety specialist, trainer and independent consultant. IHM Dadar alumnus, ex-Taj and Taj SATS, Mumbai.";
+  `Veteran hospitality professional, food-safety specialist, trainer and independent consultant. IHM Dadar alumnus, ex-Taj and Taj SATS, ${brand.city.name}.`;
+
+const socialUrls = verifiedSocialLinks.flatMap(([, channel]) =>
+  channel.url ? [channel.url] : [],
+);
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,21 +31,40 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:card", content: "summary_large_image" },
+      ...(brand.canonicalWebsiteUrl
+        ? [{ property: "og:url", content: brand.canonicalWebsiteUrl }]
+        : []),
+      ...(brand.assets.openGraphImage
+        ? [
+            { property: "og:image", content: brand.assets.openGraphImage },
+            { name: "twitter:image", content: brand.assets.openGraphImage },
+          ]
+        : []),
+      {
+        name: "twitter:card",
+        content: brand.assets.openGraphImage ? "summary_large_image" : "summary",
+      },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: brand.canonicalWebsiteUrl
+      ? [{ rel: "canonical", href: brand.canonicalWebsiteUrl }]
+      : [],
     scripts: [
       {
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
-          name: "Dinesh Saxena",
-          jobTitle: "Hospitality Professional, Food Safety Specialist, Trainer and Independent Consultant",
-          telephone: "+91-9820274960",
-          address: { "@type": "PostalAddress", addressLocality: "Mumbai", addressCountry: "IN" },
+          name: brand.displayName,
+          jobTitle: brand.descriptor.replaceAll(" · ", ", "),
+          telephone: brand.phone.e164,
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: brand.city.name,
+            addressCountry: "IN",
+          },
           alumniOf: "IHM Dadar, Mumbai",
+          ...(brand.canonicalWebsiteUrl ? { url: brand.canonicalWebsiteUrl } : {}),
+          ...(socialUrls.length > 0 ? { sameAs: socialUrls } : {}),
         }),
       },
     ],
